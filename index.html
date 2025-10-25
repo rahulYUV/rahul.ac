@@ -15,6 +15,63 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    body.dark-mode {
+      background: #0a0a0a;
+      color: #e0e0e0;
+    }
+
+    body.dark-mode header {
+      border-bottom-color: #333;
+    }
+
+    body.dark-mode .section {
+      border-bottom-color: #333;
+    }
+
+    body.dark-mode .section:hover {
+      background: #1a1a1a;
+    }
+
+    body.dark-mode .content {
+      color: #c0c0c0;
+    }
+
+    body.dark-mode .social-links svg {
+      fill: #e0e0e0;
+    }
+
+    body.dark-mode .social-links a:hover svg {
+      fill: #888;
+    }
+
+    .theme-toggle {
+      background: transparent;
+      border: 2px solid #000;
+      border-radius: 50px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    body.dark-mode .theme-toggle {
+      border-color: #e0e0e0;
+      color: #e0e0e0;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.05);
+    }
+
+    .theme-toggle span {
+      font-size: 18px;
     }
 
     .container {
@@ -90,9 +147,197 @@
     .social-links a:hover svg {
       fill: #666;
     }
+
+    .cmd-section {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      padding: 1.2rem;
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 8px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      transition: all 0.3s ease;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    body.dark-mode .cmd-section {
+      background: #0a0a0a;
+      border-color: #333;
+    }
+
+    .cmd-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .color-switcher {
+      display: none;
+    }
+
+    .cmd-header {
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    body.dark-mode .cmd-header {
+      color: #e0e0e0;
+    }
+
+    .cmd-output {
+      color: #000;
+      margin-bottom: 0.5rem;
+      white-space: pre-wrap;
+      max-height: 180px;
+      min-height: 180px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+    }
+
+    body.dark-mode .cmd-output {
+      color: #e0e0e0;
+    }
+
+    .cmd-output::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .cmd-output::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+
+    body.dark-mode .cmd-output::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .cmd-output::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+
+    body.dark-mode .cmd-output::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .cmd-output::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    body.dark-mode .cmd-output::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .cmd-input-line {
+      display: flex;
+      align-items: center;
+      color: #000;
+    }
+
+    body.dark-mode .cmd-input-line {
+      color: #e0e0e0;
+    }
+
+    .cmd-prompt {
+      color: #000;
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    body.dark-mode .cmd-prompt {
+      color: #e0e0e0;
+    }
+
+    .cmd-input {
+      flex: 1;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 4px 8px;
+      color: #000;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 1rem;
+      outline: none;
+      transition: background 0.2s ease;
+    }
+
+    body.dark-mode .cmd-input {
+      background: #1a1a1a;
+      border-color: #333;
+      color: #e0e0e0;
+    }
+
+    .cmd-input:focus {
+      background: #fff;
+      border-color: #999;
+      outline: none;
+    }
+
+    body.dark-mode .cmd-input:focus {
+      background: #0a0a0a;
+      border-color: #555;
+    }
+
+    .top-controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .github-link {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 2px solid #000;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    body.dark-mode .github-link {
+      border-color: #e0e0e0;
+    }
+
+    .github-link:hover {
+      transform: scale(1.1);
+    }
+
+    .github-link svg {
+      width: 20px;
+      height: 20px;
+      fill: #000;
+    }
+
+    body.dark-mode .github-link svg {
+      fill: #e0e0e0;
+    }
   </style>
 </head>
 <body>
+
+  <div class="top-controls">
+    <a href="https://github.com/rahulYUV" target="_blank" class="github-link" title="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+    </a>
+    
+    <button class="theme-toggle" id="themeToggle">
+      <span id="themeIcon">🌙</span>
+      <span id="themeText">Dark</span>
+    </button>
+  </div>
 
   <div class="container">
     <header>
@@ -192,14 +437,198 @@
         <b>A:</b> From earth, tho i prefer binary but yeah I understand english too.</p>
       </div>
     </div>
+
+    <div class="cmd-section" id="cmdSection">
+      <div class="cmd-controls">
+        <div class="cmd-header" id="cmdHeader">VoidOS [Version 1.0.2025]
+(c) Void Corporation. All rights reserved.</div>
+      </div>
+      <div class="cmd-output" id="cmdOutput">Type 'help' to see available commands.
+
+</div>
+      <div class="cmd-input-line">
+        <span class="cmd-prompt">C:\Users\Rahul></span>
+        <input type="text" class="cmd-input" id="cmdInput" autofocus>
+      </div>
+    </div>
   </div>
 
   <script>
+    // Update CMD header with current date/time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { 
+        weekday: 'short', 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      };
+      const dateTimeStr = now.toLocaleString('en-US', options);
+      
+      const cmdHeader = document.getElementById('cmdHeader');
+      cmdHeader.textContent = `VoidOS [Version 1.0.2025]
+(c) Void Corporation. All rights reserved.
+${dateTimeStr}`;
+    }
+    
+    // Update time immediately and then every minute
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        themeIcon.textContent = '☀️';
+        themeText.textContent = 'Light';
+      } else {
+        themeIcon.textContent = '🌙';
+        themeText.textContent = 'Dark';
+      }
+    });
+
+    // CMD color switcher
+    const cmdSection = document.getElementById('cmdSection');
+    const colorBtns = document.querySelectorAll('.color-btn');
+
+    colorBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.getAttribute('data-theme');
+        cmdSection.className = 'cmd-section ' + theme;
+      });
+    });
+
+    // Section toggle functionality
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
       section.addEventListener('click', () => {
         section.classList.toggle('active');
       });
+    });
+
+    // CMD functionality
+    const cmdInput = document.getElementById('cmdInput');
+    const cmdOutput = document.getElementById('cmdOutput');
+
+    const commands = {
+      help: `yo! here's what you can do:
+  help       - shows this menu (duh!)
+  whoami     - get to know me better
+  skills     - what i'm good at
+  projects   - stuff i've built
+  contact    - let's connect!
+  socials    - where to find me online
+  clear      - clean slate
+  background - my dev journey so far
+  hobbies    - what i do for fun`,
+      
+      whoami: `hey there!
+
+i'm rahul, 19, and i've been teaching myself this whole dev thing.
+currently single (lol), use arch btw, and honestly just love building stuff.
+
+what really gets me excited? writing backend code, designing clean 
+architectures, and figuring out how to scale APIs. that's my jam!`,
+      
+      skills: `alright, here's my toolkit:
+
+• python - started here, built a jarvis assistant (yes, really!)
+• java - went deep into core java for a while
+• node.js & express - THIS is where my heart is. love writing backend!
+• html/css/js - because full-stack, you know?
+• devops - currently obsessed with this. learning the whole pipeline
+• architecture stuff - designing systems, scaling APIs, making things robust
+• leetcode grinding - because problem-solving is fun (sometimes lol)
+
+basically, if it's backend or infrastructure, i'm all in.`,
+      
+      projects: `some cool things i've shipped:
+
+• jarvis assistant (2023) - python-based voice assistant. felt like iron man
+• butterlemonbot (2023) - telegram bot that people actually use!
+• bunch of web apps - mostly node.js/express backends doing their thing
+• currently cooking up some devops projects - stay tuned!
+
+the best projects? the ones that solve real problems.`,
+      
+      contact: `wanna work together? i'm down!
+
+i can help with:
+  - building your web app from scratch
+  - backend development & api design
+  - connecting you with other talented folks
+  - being a co-founder if the idea's cool
+  - freelance projects
+
+slide into my DMs on X: https://x.com/rahul_ydv7
+
+always open to discussing ideas over coffee (or code)!`,
+      
+      socials: `catch me on these platforms:
+
+X/Twitter → https://x.com/rahul_ydv7 (i post dev stuff & random thoughts)
+GitHub → https://github.com/rahulYUV (where the code lives)
+LeetCode → https://leetcode.com/u/b9CT2D8Ccx/ (grinding daily!)
+
+follow for dev updates, memes, and occasional existential tweets`,
+      
+      background: `the journey so far:
+
+2023 → discovered python, fell in love with coding, built jarvis
+      (yeah, i was that ambitious kid)
+
+early 2024 → shifted gears to core java. went pretty deep.
+
+july 2024 → found my calling in node.js & express. also started
+           leetcode because why not torture myself a bit?
+
+2025 → obsessed with devops. learning how to build, deploy, and
+       scale like the big players do it.
+
+still learning, still building, still curious about everything!`,
+      
+      hobbies: `when i'm not coding:
+
+chess - playing chess, the ultimate problem-solving game
+music - vibing to high-energy music, keeps the motivation up
+building - building random stuff, can't help it, it's addictive
+journaling - journaling on x, sharing thoughts, learning in public
+passion - coding for fun, yeah i know, i'm that guy who codes for passion
+
+honestly, i just love creating things and learning new stuff.
+curiosity keeps me going!`
+    };
+
+    cmdInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const command = cmdInput.value.trim().toLowerCase();
+        const outputText = `C:\\Users\\Rahul> ${cmdInput.value}\n`;
+        
+        if (command === 'clear') {
+          cmdOutput.textContent = '';
+          cmdInput.value = '';
+          return;
+        }
+        
+        if (commands[command]) {
+          cmdOutput.textContent += outputText + commands[command] + '\n\n';
+        } else if (command === '') {
+          cmdOutput.textContent += '\n';
+        } else {
+          cmdOutput.textContent += outputText + `'${cmdInput.value}' is not recognized as a command. Type 'help' for available commands.\n\n`;
+        }
+        
+        cmdInput.value = '';
+        cmdOutput.scrollTop = cmdOutput.scrollHeight;
+      }
     });
   </script>
 
